@@ -10,6 +10,7 @@ packages = [{include = "trading_bot_env"}]
 python = "3.9.16"
 binance-connector = "^2.0.0"
 pandas = "^1.5.3"
+boto3 = "^1.26.79"
 
 
 [build-system]
