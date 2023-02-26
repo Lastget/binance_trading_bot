@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "trading-bot-env"
+version = "0.1.0"
+description = "for binance AWS trading bot"
+authors = ["Richard <getrt1991@gmail.com>"]
+readme = "README.md"
+packages = [{include = "trading_bot_env"}]
+
+[tool.poetry.dependencies]
+python = "3.9.16"
+binance-connector = "^2.0.0"
+pandas = "^1.5.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
