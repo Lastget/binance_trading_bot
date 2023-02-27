@@ -93,6 +93,11 @@ def calculate_sell_parameters(symbol, timeframe, asset_list, boughtQty, project_
     #Calculate the quantity. this will be from previous bought amount 
     quantity = boughtQty
 
+    logging.info(f"Sell lotSize: {lotSize}")
+    logging.info(f"Sell precision: {precision}")
+    logging.info(f"Limit Sell price after lot and precision: {limit_sell_price}")
+        
+
     # Create Parameters dict based on assumption 
     # GTC: Good Til Canceled 
     params = {
@@ -140,8 +145,10 @@ def calculate_trade_parameters(symbol, timeframe, asset_list, project_setting):
         # Floor  
         raw_quantity = raw_quantity//lotSize * lotSize 
         quantity = math.floor(raw_quantity * 10**precision) / 10**precision
-        logging.info(f"quantity{quantity}")
-        logging.info(f"lotSize{lotSize}")
+        logging.info(f"Buy lotSize: {lotSize}")
+        logging.info(f"Buy precision: {precision}")
+        logging.info(f"Buy quantity after lot and precision: {quantity}")
+        
         # Create Parameters dict based on assumption 
         # GTC: Good Til Canceled 
         params = {

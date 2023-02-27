@@ -5,6 +5,7 @@ from strategy import determine_buy_event
 import time 
 from binance.error import ClientError, ServerError
 import logging
+import os 
 
 # query Binance and retrieve status 
 def query_binance_status():
@@ -84,19 +85,21 @@ def analyze_symbols(symbol_dataframe, timeframe, percentage_rise):
 
 # Make trade if params provided
 def make_trade_with_params(params, project_settings):
-    if project_settings['Testing'] == "False": 
+    if project_settings == True: 
         logging.info("Real Trade")
         # Set API key 
-        api_key = project_settings['BinanceKeys']['API_Key'] 
-        secret_key = project_settings['BinanceKeys']['Secret_Key']
+        # api_key = project_settings['BinanceKeys']['API_Key'] 
+        # secret_key = project_settings['BinanceKeys']['Secret_Key']
+        api_key = os.environ.get('BINANCE_API_KEY')
+        secret_key = os.environ.get('BINANCE_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key)
         
     else: 
         logging.info("Testing Trade")
         # Set API key 
-        api_key = project_settings['TestKeys']['Test_API_Key'] 
-        secret_key = project_settings['TestKeys']['Test_Secret_Key']
+        api_key = os.environ.get('BINANCE_TEST_API_KEY')
+        secret_key = os.environ.get('BINANCE_TEST_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key, base_url= "https://testnet.binance.vision")
 
@@ -118,16 +121,16 @@ def make_trade_with_params(params, project_settings):
 # Open orders are those unfilled and working orders still in the market waiting to be executed.
 def query_open_trades(project_settings):
     # Real trading data 
-    if project_settings['Testing'] == "False":
+    if project_settings == True:
         # Set API key 
-        api_key = project_settings['BinanceKeys']['API_Key'] 
-        secret_key = project_settings['BinanceKeys']['Secret_Key']
+        api_key = os.environ.get('BINANCE_API_KEY')
+        secret_key = os.environ.get('BINANCE_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key)
     else:
         # Set API key 
-        api_key = project_settings['TestKeys']['Test_API_Key'] 
-        secret_key = project_settings['TestKeys']['Test_Secret_Key']
+        api_key = os.environ.get('BINANCE_TEST_API_KEY')
+        secret_key = os.environ.get('BINANCE_TEST_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key, base_url= "https://testnet.binance.vision")
 
@@ -143,16 +146,16 @@ def query_open_trades(project_settings):
 
 # Cancel Order 
 def cancel_order_by_symbol(symbol, project_settings):
-    if project_settings['Testing'] == "False":
+    if project_settings == True:
         # Set API key 
-        api_key = project_settings['BinanceKeys']['API_Key'] 
-        secret_key = project_settings['BinanceKeys']['Secret_Key']
+        api_key = os.environ.get('BINANCE_API_KEY')
+        secret_key = os.environ.get('BINANCE_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key)
     else:
         # Set API key 
-        api_key = project_settings['TestKeys']['Test_API_Key'] 
-        secret_key = project_settings['TestKeys']['Test_Secret_Key']
+        api_key = os.environ.get('BINANCE_TEST_API_KEY')
+        secret_key = os.environ.get('BINANCE_TEST_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key, base_url= "https://testnet.binance.vision")
 
@@ -168,16 +171,16 @@ def cancel_order_by_symbol(symbol, project_settings):
 
 # Check order
 def check_order_by_symbol_id(symbol, order_id, project_settings):
-    if project_settings['Testing'] == "False":
+    if project_settings == True:
         # Set API key 
-        api_key = project_settings['BinanceKeys']['API_Key'] 
-        secret_key = project_settings['BinanceKeys']['Secret_Key']
+        api_key = os.environ.get('BINANCE_API_KEY')
+        secret_key = os.environ.get('BINANCE_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key)
     else:
         # Set API key 
-        api_key = project_settings['TestKeys']['Test_API_Key'] 
-        secret_key = project_settings['TestKeys']['Test_Secret_Key']
+        api_key = os.environ.get('BINANCE_TEST_API_KEY')
+        secret_key = os.environ.get('BINANCE_TEST_SECRET_KEY')
         # Set up client 
         client = Spot(api_key, secret_key, base_url= "https://testnet.binance.vision")
 
@@ -193,11 +196,19 @@ def check_order_by_symbol_id(symbol, order_id, project_settings):
 
 
 def get_ticker_lot_size(symbol, project_settings):
-    # Set API key 
-    api_key = project_settings['BinanceKeys']['API_Key'] 
-    secret_key = project_settings['BinanceKeys']['Secret_Key']
-    # Set up client 
-    client = Spot(api_key, secret_key)
+    if project_settings == True:
+        # Set API key 
+        api_key = os.environ.get('BINANCE_API_KEY')
+        secret_key = os.environ.get('BINANCE_SECRET_KEY')
+        # Set up client 
+        client = Spot(api_key, secret_key)
+    else:
+        # Set API key 
+        api_key = os.environ.get('BINANCE_TEST_API_KEY')
+        secret_key = os.environ.get('BINANCE_TEST_SECRET_KEY')
+        # Set up client 
+        client = Spot(api_key, secret_key, base_url= "https://testnet.binance.vision")
+
 
     try: 
         ex_info = client.exchange_info() 

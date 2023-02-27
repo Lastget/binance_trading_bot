@@ -1,0 +1,233 @@
+2023-02-27 15:16:19,396: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 15:16:19,397: INFO: 2023-02-27 15:16:19.396893
+2023-02-27 15:30:52,813: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 15:30:52,813: INFO: 2023-02-27 15:30:52.813471
+2023-02-27 15:31:09,763: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 15:31:09,764: INFO: 2023-02-27 15:31:09.763753
+2023-02-27 15:37:07,602: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 15:37:07,604: INFO: 2023-02-27 15:37:07.603529
+2023-02-27 15:48:50,472: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 15:48:50,473: INFO: 2023-02-27 15:48:50.472945
+2023-02-27 16:04:10,715: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:04:10,715: INFO: 2023-02-27 16:04:10.715400
+2023-02-27 16:10:12,474: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:10:12,475: INFO: 2023-02-27 16:10:12.475048
+2023-02-27 16:10:12,642: INFO: --------- Binance account verified ---------
+2023-02-27 16:10:12,643: INFO: --------- Start Strategy 2 ---------
+2023-02-27 16:10:12,750: INFO: NEW candle data detected
+2023-02-27 16:10:12,750: INFO: STEP1. Cancelling open orders
+2023-02-27 16:10:13,033: INFO: STEP2. Analyzing New Assets to purchase
+2023-02-27 16:10:13,272: INFO: Opening trade on new symbol: BTCBUSD
+2023-02-27 16:10:13,460: INFO: quantity0.00422999
+2023-02-27 16:10:13,460: INFO: lotSize1e-06
+2023-02-27 16:10:13,460: INFO: {'symbol': 'BTCBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00422999}
+2023-02-27 16:10:13,460: INFO: Testing Trade
+2023-02-27 16:10:13,559: ERROR: Client_Error: (400, -1013, 'Filter failure: LOT_SIZE', {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '47', 'Connection': 'keep-alive', 'Date': 'Mon, 27 Feb 2023 08:10:13 GMT', 'Server': 'nginx', 'x-mbx-uuid': '1ef427fe-ad2c-4ac7-a058-084b22af881e', 'x-mbx-used-weight': '51', 'x-mbx-used-weight-1m': '51', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 c170cbd4641cb6fe0b11e4f72d264a70.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'TPE50-C1', 'X-Amz-Cf-Id': 'zQJJWQI7vplBf9EehUQucUqqfffQaQGhXKDM1TYp_wvy1Za7HZr7iw=='}, None)
+2023-02-27 16:10:13,560: INFO: None
+2023-02-27 16:10:13,560: INFO: Error placing order
+2023-02-27 16:10:13,560: INFO: Error:False
+2023-02-27 16:10:13,561: INFO: Opening trade on new symbol: ETHBUSD
+2023-02-27 16:10:13,751: INFO: quantity0.06048
+2023-02-27 16:10:13,751: INFO: lotSize1e-05
+2023-02-27 16:10:13,751: INFO: {'symbol': 'ETHBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.06048}
+2023-02-27 16:10:13,751: INFO: Testing Trade
+2023-02-27 16:10:13,844: INFO: {'symbol': 'ETHBUSD', 'orderId': 8848644, 'orderListId': -1, 'clientOrderId': 'eTwMaHbEpK0ll4g9pde1Fc', 'transactTime': 1677485413881, 'price': '0.00000000', 'origQty': '0.06048000', 'executedQty': '0.06048000', 'cummulativeQuoteQty': '98.99850240', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677485413881, 'fills': [{'price': '1636.88000000', 'qty': '0.06048000', 'commission': '0.00000000', 'commissionAsset': 'ETH', 'tradeId': 1607390}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:10:13,844: INFO: Analysis Completed
+2023-02-27 16:10:13,933: INFO: A new half hour candle!
+2023-02-27 16:10:13,933: INFO: STEP3. Start Analysis Selling condition
+2023-02-27 16:10:13,933: INFO: analyze to sell ETHBUSD ...
+2023-02-27 16:10:14,021: INFO: analysis_sell: True
+2023-02-27 16:10:14,112: INFO: {'symbol': 'ETHBUSD', 'orderId': 8848644, 'orderListId': -1, 'clientOrderId': 'eTwMaHbEpK0ll4g9pde1Fc', 'price': '0.00000000', 'origQty': '0.06048000', 'executedQty': '0.06048000', 'cummulativeQuoteQty': '98.99850240', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677485413881, 'updateTime': 1677485413881, 'isWorking': True, 'workingTime': 1677485413881, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:10:14,112: INFO: placing a sell order of ETHBUSD orderID 8848644
+2023-02-27 16:10:14,295: INFO: Sell: {'symbol': 'ETHBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.06048000', 'stopPrice': 1669.59, 'price': 1636.19, 'trailingDelta': 100}
+2023-02-27 16:10:14,295: INFO: Testing Trade
+2023-02-27 16:10:14,388: INFO: Trade_placing:{'symbol': 'ETHBUSD', 'orderId': 8848646, 'orderListId': -1, 'clientOrderId': '2mks9Emn7NZBTqkQL3Beq4', 'transactTime': 1677485414427}
+2023-02-27 16:10:14,388: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:10:14,388: INFO: Will keep updating candle data...
+2023-02-27 16:10:15,622: INFO: Will keep updating candle data...
+2023-02-27 16:10:16,855: INFO: Will keep updating candle data...
+2023-02-27 16:10:18,079: INFO: Will keep updating candle data...
+2023-02-27 16:10:19,310: INFO: Will keep updating candle data...
+2023-02-27 16:10:20,549: INFO: Will keep updating candle data...
+2023-02-27 16:10:21,783: INFO: Will keep updating candle data...
+2023-02-27 16:10:22,987: INFO: Will keep updating candle data...
+2023-02-27 16:10:24,202: INFO: Will keep updating candle data...
+2023-02-27 16:10:25,431: INFO: Will keep updating candle data...
+2023-02-27 16:10:26,727: INFO: Will keep updating candle data...
+2023-02-27 16:10:27,965: INFO: Will keep updating candle data...
+2023-02-27 16:10:29,197: INFO: Will keep updating candle data...
+2023-02-27 16:10:30,399: INFO: Will keep updating candle data...
+2023-02-27 16:10:31,629: INFO: Will keep updating candle data...
+2023-02-27 16:10:32,845: INFO: Will keep updating candle data...
+2023-02-27 16:10:34,066: INFO: Will keep updating candle data...
+2023-02-27 16:10:35,297: INFO: Will keep updating candle data...
+2023-02-27 16:10:36,507: INFO: Will keep updating candle data...
+2023-02-27 16:10:37,745: INFO: Will keep updating candle data...
+2023-02-27 16:11:58,086: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:11:58,087: INFO: 2023-02-27 16:11:58.087116
+2023-02-27 16:11:58,207: INFO: --------- Binance account verified ---------
+2023-02-27 16:11:58,207: INFO: --------- Start Strategy 2 ---------
+2023-02-27 16:11:58,309: INFO: NEW candle data detected
+2023-02-27 16:11:58,309: INFO: STEP1. Cancelling open orders
+2023-02-27 16:11:58,408: INFO: STEP2. Analyzing New Assets to purchase
+2023-02-27 16:11:58,639: INFO: Opening trade on new symbol: BTCBUSD
+2023-02-27 16:11:58,998: INFO: quantity0.00423
+2023-02-27 16:11:58,998: INFO: lotSize1e-05
+2023-02-27 16:11:58,998: INFO: {'symbol': 'BTCBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00423}
+2023-02-27 16:11:58,998: INFO: Real Trade
+2023-02-27 16:11:59,097: INFO: {'symbol': 'BTCBUSD', 'orderId': 9171421937, 'orderListId': -1, 'clientOrderId': 'ANTG1qoLKlMNX43tXV9dgP', 'transactTime': 1677485519135, 'price': '0.00000000', 'origQty': '0.00423000', 'executedQty': '0.00423000', 'cummulativeQuoteQty': '98.95784670', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677485519135, 'fills': [{'price': '23394.29000000', 'qty': '0.00423000', 'commission': '0.00000000', 'commissionAsset': 'BNB', 'tradeId': 907857535}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:11:59,097: INFO: Opening trade on new symbol: ETHBUSD
+2023-02-27 16:11:59,515: INFO: quantity0.0605
+2023-02-27 16:11:59,516: INFO: lotSize0.0001
+2023-02-27 16:11:59,516: INFO: {'symbol': 'ETHBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.0605}
+2023-02-27 16:11:59,516: INFO: Real Trade
+2023-02-27 16:11:59,610: ERROR: Client_Error: (400, -2010, 'Account has insufficient balance for requested action.', {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '77', 'Connection': 'keep-alive', 'Date': 'Mon, 27 Feb 2023 08:11:59 GMT', 'Server': 'nginx', 'x-mbx-uuid': '72688cea-5576-44c8-bf17-021b42cbe723', 'x-mbx-used-weight': '85', 'x-mbx-used-weight-1m': '85', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1d': '2', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 96902189172dc36e37becde22ad7bd8a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'TPE50-C1', 'X-Amz-Cf-Id': '4CPPjvE8T8aP3cinUDp6HebrvPpmEY5YevCvmZIm-FByHvF7u3Wn4Q=='}, None)
+2023-02-27 16:11:59,612: INFO: None
+2023-02-27 16:11:59,612: INFO: Error placing order
+2023-02-27 16:11:59,612: INFO: Error:False
+2023-02-27 16:11:59,612: INFO: Analysis Completed
+2023-02-27 16:11:59,716: INFO: A new half hour candle!
+2023-02-27 16:11:59,717: INFO: STEP3. Start Analysis Selling condition
+2023-02-27 16:11:59,717: INFO: analyze to sell BTCBUSD ...
+2023-02-27 16:11:59,821: INFO: analysis_sell: True
+2023-02-27 16:11:59,924: INFO: {'symbol': 'BTCBUSD', 'orderId': 9171421937, 'orderListId': -1, 'clientOrderId': 'ANTG1qoLKlMNX43tXV9dgP', 'price': '0.00000000', 'origQty': '0.00423000', 'executedQty': '0.00423000', 'cummulativeQuoteQty': '98.95784670', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677485519135, 'updateTime': 1677485519135, 'isWorking': True, 'workingTime': 1677485519135, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:11:59,924: INFO: placing a sell order of BTCBUSD orderID 9171421937
+2023-02-27 16:12:00,280: INFO: Sell: {'symbol': 'BTCBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.00423000', 'stopPrice': 23861.63, 'price': 23384.39, 'trailingDelta': 100}
+2023-02-27 16:12:00,281: INFO: Real Trade
+2023-02-27 16:12:00,372: INFO: Trade_placing:{'symbol': 'BTCBUSD', 'orderId': 9171422618, 'orderListId': -1, 'clientOrderId': 'oFRQZjmMSjp0ZwZWtQz8qo', 'transactTime': 1677485520413}
+2023-02-27 16:12:00,372: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:12:00,372: INFO: Will keep updating candle data...
+2023-02-27 16:12:01,611: INFO: Will keep updating candle data...
+2023-02-27 16:12:02,812: INFO: Will keep updating candle data...
+2023-02-27 16:16:24,405: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:16:24,406: INFO: 2023-02-27 16:16:24.406171
+2023-02-27 16:16:25,460: INFO: --------- Binance account verified ---------
+2023-02-27 16:16:25,461: INFO: --------- Start Strategy 2 ---------
+2023-02-27 16:16:26,270: INFO: NEW candle data detected
+2023-02-27 16:16:26,270: INFO: STEP1. Cancelling open orders
+2023-02-27 16:16:27,482: INFO: Order Canceled
+2023-02-27 16:16:27,483: INFO: STEP2. Analyzing New Assets to purchase
+2023-02-27 16:16:29,828: INFO: Opening trade on new symbol: BTCBUSD
+2023-02-27 16:16:32,026: INFO: quantity0.00423099
+2023-02-27 16:16:32,026: INFO: lotSize1e-06
+2023-02-27 16:16:32,026: INFO: {'symbol': 'BTCBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00423099}
+2023-02-27 16:16:32,026: INFO: Testing Trade
+2023-02-27 16:16:32,792: ERROR: Client_Error: (400, -1013, 'Filter failure: LOT_SIZE', {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '47', 'Connection': 'keep-alive', 'Date': 'Mon, 27 Feb 2023 08:16:32 GMT', 'Server': 'nginx', 'x-mbx-uuid': '1ef427fe-ad2c-4ac7-a058-084b22af881e', 'x-mbx-used-weight': '52', 'x-mbx-used-weight-1m': '52', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ba6b942710aa259103f983d062cdf774.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'TPE50-C1', 'X-Amz-Cf-Id': '1QsA0Is8bfmlvrF3yQO4JxZoyep24Jupj3CoB-THrncvaOweowGwjw=='}, None)
+2023-02-27 16:16:32,796: INFO: None
+2023-02-27 16:16:32,796: INFO: Error placing order
+2023-02-27 16:16:32,796: INFO: Error:False
+2023-02-27 16:16:32,796: INFO: Opening trade on new symbol: ETHBUSD
+2023-02-27 16:16:33,954: INFO: quantity0.06053
+2023-02-27 16:16:33,954: INFO: lotSize1e-05
+2023-02-27 16:16:33,954: INFO: {'symbol': 'ETHBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.06053}
+2023-02-27 16:16:33,954: INFO: Testing Trade
+2023-02-27 16:16:35,728: INFO: {'symbol': 'ETHBUSD', 'orderId': 8850152, 'orderListId': -1, 'clientOrderId': 'vvbjeATpXh6WCpO1IiF1yE', 'transactTime': 1677485795725, 'price': '0.00000000', 'origQty': '0.06053000', 'executedQty': '0.06053000', 'cummulativeQuoteQty': '98.99681500', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677485795725, 'fills': [{'price': '1635.50000000', 'qty': '0.06053000', 'commission': '0.00000000', 'commissionAsset': 'ETH', 'tradeId': 1607524}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:16:35,729: INFO: Analysis Completed
+2023-02-27 16:16:36,267: INFO: A new half hour candle!
+2023-02-27 16:16:36,267: INFO: STEP3. Start Analysis Selling condition
+2023-02-27 16:16:36,267: INFO: analyze to sell ETHBUSD ...
+2023-02-27 16:16:38,780: INFO: analysis_sell: True
+2023-02-27 16:16:39,236: INFO: {'symbol': 'ETHBUSD', 'orderId': 8850152, 'orderListId': -1, 'clientOrderId': 'vvbjeATpXh6WCpO1IiF1yE', 'price': '0.00000000', 'origQty': '0.06053000', 'executedQty': '0.06053000', 'cummulativeQuoteQty': '98.99681500', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677485795725, 'updateTime': 1677485795725, 'isWorking': True, 'workingTime': 1677485795725, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:16:39,237: INFO: placing a sell order of ETHBUSD orderID 8850152
+2023-02-27 16:16:40,884: INFO: Sell: {'symbol': 'ETHBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.06053000', 'stopPrice': 1668.34, 'price': 1634.97, 'trailingDelta': 100}
+2023-02-27 16:16:40,884: INFO: Testing Trade
+2023-02-27 16:16:41,522: INFO: Trade_placing:{'symbol': 'ETHBUSD', 'orderId': 8850177, 'orderListId': -1, 'clientOrderId': 'liyodeUOzlRauFdWfk1JOo', 'transactTime': 1677485801525}
+2023-02-27 16:16:41,522: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:16:41,522: INFO: Will keep updating candle data...
+2023-02-27 16:16:44,073: INFO: Will keep updating candle data...
+2023-02-27 16:16:46,565: INFO: Will keep updating candle data...
+2023-02-27 16:16:48,656: INFO: Will keep updating candle data...
+2023-02-27 16:16:50,457: INFO: Will keep updating candle data...
+2023-02-27 16:16:53,696: INFO: Will keep updating candle data...
+2023-02-27 16:16:56,112: INFO: Will keep updating candle data...
+2023-02-27 16:32:58,008: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:32:58,009: INFO: 2023-02-27 16:32:58.008654
+2023-02-27 16:32:58,132: INFO: --------- Binance account verified ---------
+2023-02-27 16:32:58,132: INFO: --------- Start Strategy 2 ---------
+2023-02-27 16:32:58,241: INFO: NEW candle data detected
+2023-02-27 16:32:58,241: INFO: STEP1. Cancelling open orders
+2023-02-27 16:32:58,703: INFO: Order Canceled
+2023-02-27 16:32:58,703: INFO: STEP2. Analyzing New Assets to purchase
+2023-02-27 16:32:58,959: INFO: Opening trade on new symbol: BTCBUSD
+2023-02-27 16:32:59,142: INFO: lotSize: 1e-06
+2023-02-27 16:32:59,143: INFO: precision: 8
+2023-02-27 16:32:59,143: INFO: quantity after lot and precision: 0.004236
+2023-02-27 16:32:59,143: INFO: {'symbol': 'BTCBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.004236}
+2023-02-27 16:32:59,143: INFO: Testing Trade
+2023-02-27 16:32:59,241: INFO: {'symbol': 'BTCBUSD', 'orderId': 9047490, 'orderListId': -1, 'clientOrderId': 'SwC8FvdsUTqTMEEUcjKCwd', 'transactTime': 1677486779300, 'price': '0.00000000', 'origQty': '0.00423600', 'executedQty': '0.00423600', 'cummulativeQuoteQty': '98.99252424', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677486779300, 'fills': [{'price': '23369.34000000', 'qty': '0.00423600', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 3111213}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:32:59,242: INFO: Opening trade on new symbol: ETHBUSD
+2023-02-27 16:32:59,457: INFO: lotSize: 1e-05
+2023-02-27 16:32:59,458: INFO: precision: 8
+2023-02-27 16:32:59,458: INFO: quantity after lot and precision: 0.06061
+2023-02-27 16:32:59,458: INFO: {'symbol': 'ETHBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.06061}
+2023-02-27 16:32:59,458: INFO: Testing Trade
+2023-02-27 16:32:59,560: INFO: {'symbol': 'ETHBUSD', 'orderId': 8853933, 'orderListId': -1, 'clientOrderId': 'zb6tQ6UZMP3JwWJNr67lbl', 'transactTime': 1677486779617, 'price': '0.00000000', 'origQty': '0.06061000', 'executedQty': '0.06061000', 'cummulativeQuoteQty': '99.00764720', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677486779617, 'fills': [{'price': '1633.52000000', 'qty': '0.06061000', 'commission': '0.00000000', 'commissionAsset': 'ETH', 'tradeId': 1607815}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:32:59,561: INFO: Analysis Completed
+2023-02-27 16:32:59,657: INFO: A new half hour candle!
+2023-02-27 16:32:59,657: INFO: STEP3. Start Analysis Selling condition
+2023-02-27 16:32:59,657: INFO: analyze to sell BTCBUSD ...
+2023-02-27 16:32:59,744: INFO: analysis_sell: True
+2023-02-27 16:32:59,833: INFO: {'symbol': 'BTCBUSD', 'orderId': 9047490, 'orderListId': -1, 'clientOrderId': 'SwC8FvdsUTqTMEEUcjKCwd', 'price': '0.00000000', 'origQty': '0.00423600', 'executedQty': '0.00423600', 'cummulativeQuoteQty': '98.99252424', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677486779300, 'updateTime': 1677486779300, 'isWorking': True, 'workingTime': 1677486779300, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:32:59,833: INFO: placing a sell order of BTCBUSD orderID 9047490
+2023-02-27 16:33:00,089: INFO: Sell: {'symbol': 'BTCBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.00423600', 'stopPrice': 23836.85, 'price': 23360.11, 'trailingDelta': 100}
+2023-02-27 16:33:00,089: INFO: Testing Trade
+2023-02-27 16:33:00,191: INFO: Trade_placing:{'symbol': 'BTCBUSD', 'orderId': 9047495, 'orderListId': -1, 'clientOrderId': 'S0DVC4D5BuZibt7XI7bRY0', 'transactTime': 1677486780251}
+2023-02-27 16:33:00,192: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:33:00,192: INFO: analyze to sell ETHBUSD ...
+2023-02-27 16:33:00,284: INFO: analysis_sell: True
+2023-02-27 16:33:00,384: INFO: {'symbol': 'ETHBUSD', 'orderId': 8853933, 'orderListId': -1, 'clientOrderId': 'zb6tQ6UZMP3JwWJNr67lbl', 'price': '0.00000000', 'origQty': '0.06061000', 'executedQty': '0.06061000', 'cummulativeQuoteQty': '99.00764720', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677486779617, 'updateTime': 1677486779617, 'isWorking': True, 'workingTime': 1677486779617, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:33:00,384: INFO: placing a sell order of ETHBUSD orderID 8853933
+2023-02-27 16:33:00,571: INFO: Sell: {'symbol': 'ETHBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.06061000', 'stopPrice': 1666.18, 'price': 1632.85, 'trailingDelta': 100}
+2023-02-27 16:33:00,571: INFO: Testing Trade
+2023-02-27 16:33:00,658: INFO: Trade_placing:{'symbol': 'ETHBUSD', 'orderId': 8853941, 'orderListId': -1, 'clientOrderId': 'TPYpO4xZr2YS9KQdR3ic7O', 'transactTime': 1677486780720}
+2023-02-27 16:33:00,658: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:33:00,658: INFO: Placed ALL selling orders.
+2023-02-27 16:42:33,513: INFO: --------- Verified Satus Binance ready to go  ---------
+2023-02-27 16:42:33,513: INFO: 2023-02-27 16:42:33.513359
+2023-02-27 16:42:33,679: INFO: --------- Binance account verified ---------
+2023-02-27 16:42:33,679: INFO: --------- Start Strategy 2 ---------
+2023-02-27 16:42:33,785: INFO: NEW candle data detected
+2023-02-27 16:42:33,785: INFO: STEP1. Cancelling open orders
+2023-02-27 16:42:34,429: INFO: Order Canceled
+2023-02-27 16:42:34,616: INFO: Order Canceled
+2023-02-27 16:42:34,617: INFO: STEP2. Analyzing New Assets to purchase
+2023-02-27 16:42:35,391: INFO: Opening trade on new symbol: BTCBUSD
+2023-02-27 16:42:35,936: INFO: Buy lotSize: 1e-06
+2023-02-27 16:42:35,936: INFO: Buy precision: 8
+2023-02-27 16:42:35,936: INFO: Buy quantity after lot and precision: 0.004229
+2023-02-27 16:42:35,936: INFO: {'symbol': 'BTCBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.004229}
+2023-02-27 16:42:35,936: INFO: Testing Trade
+2023-02-27 16:42:36,480: INFO: {'symbol': 'BTCBUSD', 'orderId': 9049817, 'orderListId': -1, 'clientOrderId': 'bhuLV32psKykQAkygkvZqG', 'transactTime': 1677487356492, 'price': '0.00000000', 'origQty': '0.00422900', 'executedQty': '0.00422900', 'cummulativeQuoteQty': '99.01531089', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677487356492, 'fills': [{'price': '23413.41000000', 'qty': '0.00422900', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 3112126}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:42:36,481: INFO: Opening trade on new symbol: ETHBUSD
+2023-02-27 16:42:36,984: INFO: Buy lotSize: 1e-05
+2023-02-27 16:42:36,986: INFO: Buy precision: 8
+2023-02-27 16:42:36,986: INFO: Buy quantity after lot and precision: 0.06049
+2023-02-27 16:42:36,986: INFO: {'symbol': 'ETHBUSD', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.06049}
+2023-02-27 16:42:36,986: INFO: Testing Trade
+2023-02-27 16:42:37,498: INFO: {'symbol': 'ETHBUSD', 'orderId': 8856123, 'orderListId': -1, 'clientOrderId': 'eZWnAGYWJvJZZOupbGMEpj', 'transactTime': 1677487357513, 'price': '0.00000000', 'origQty': '0.06049000', 'executedQty': '0.06049000', 'cummulativeQuoteQty': '99.00035360', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1677487357513, 'fills': [{'price': '1636.64000000', 'qty': '0.06049000', 'commission': '0.00000000', 'commissionAsset': 'ETH', 'tradeId': 1608031}], 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:42:37,498: INFO: Analysis Completed
+2023-02-27 16:42:37,744: INFO: A new half hour candle!
+2023-02-27 16:42:37,744: INFO: STEP3. Start Analysis Selling condition
+2023-02-27 16:42:37,744: INFO: analyze to sell BTCBUSD ...
+2023-02-27 16:42:37,944: INFO: analysis_sell: True
+2023-02-27 16:42:38,115: INFO: {'symbol': 'BTCBUSD', 'orderId': 9049817, 'orderListId': -1, 'clientOrderId': 'bhuLV32psKykQAkygkvZqG', 'price': '0.00000000', 'origQty': '0.00422900', 'executedQty': '0.00422900', 'cummulativeQuoteQty': '99.01531089', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677487356492, 'updateTime': 1677487356492, 'isWorking': True, 'workingTime': 1677487356492, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:42:38,115: INFO: placing a sell order of BTCBUSD orderID 9049817
+2023-02-27 16:42:38,304: INFO: Sell lotSize: 1e-06
+2023-02-27 16:42:38,304: INFO: Sell precision: 8
+2023-02-27 16:42:38,304: INFO: Limit Sell price after lot and precision: 23402.74
+2023-02-27 16:42:38,304: INFO: Sell: {'symbol': 'BTCBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.00422900', 'stopPrice': 23880.35, 'price': 23402.74, 'trailingDelta': 100}
+2023-02-27 16:42:38,304: INFO: Testing Trade
+2023-02-27 16:42:38,394: INFO: Trade_placing:{'symbol': 'BTCBUSD', 'orderId': 9049826, 'orderListId': -1, 'clientOrderId': '0JQWd9RWoGWhem5dYEk9pK', 'transactTime': 1677487358411}
+2023-02-27 16:42:38,395: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:42:38,395: INFO: analyze to sell ETHBUSD ...
+2023-02-27 16:42:38,490: INFO: analysis_sell: True
+2023-02-27 16:42:38,595: INFO: {'symbol': 'ETHBUSD', 'orderId': 8856123, 'orderListId': -1, 'clientOrderId': 'eZWnAGYWJvJZZOupbGMEpj', 'price': '0.00000000', 'origQty': '0.06049000', 'executedQty': '0.06049000', 'cummulativeQuoteQty': '99.00035360', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'stopPrice': '0.00000000', 'icebergQty': '0.00000000', 'time': 1677487357513, 'updateTime': 1677487357513, 'isWorking': True, 'workingTime': 1677487357513, 'origQuoteOrderQty': '0.00000000', 'selfTradePreventionMode': 'NONE'}
+2023-02-27 16:42:38,595: INFO: placing a sell order of ETHBUSD orderID 8856123
+2023-02-27 16:42:38,779: INFO: Sell lotSize: 1e-05
+2023-02-27 16:42:38,779: INFO: Sell precision: 8
+2023-02-27 16:42:38,779: INFO: Limit Sell price after lot and precision: 1635.98
+2023-02-27 16:42:38,779: INFO: Sell: {'symbol': 'ETHBUSD', 'side': 'SELL', 'type': 'TAKE_PROFIT_LIMIT', 'timeInForce': 'GTC', 'quantity': '0.06049000', 'stopPrice': 1669.37, 'price': 1635.98, 'trailingDelta': 100}
+2023-02-27 16:42:38,779: INFO: Testing Trade
+2023-02-27 16:42:38,883: INFO: Trade_placing:{'symbol': 'ETHBUSD', 'orderId': 8856131, 'orderListId': -1, 'clientOrderId': 'IQSYxajwOjCwbwu1pUOFlY', 'transactTime': 1677487358897}
+2023-02-27 16:42:38,884: INFO: -------------Finish placing sell order--------------
+2023-02-27 16:42:38,884: INFO: Placed ALL selling orders.
