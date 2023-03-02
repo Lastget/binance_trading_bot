@@ -32,24 +32,20 @@ def determine_buy_event(symbol, timeframe, percentage_rise):
     # retrieve the pevious 3 candles 
     candlestick_data = get_and_transform_binance_data(symbol, timeframe, number_of_candles=3)
     # Determine if last 3 candles are green 
-    # if candlestick_data.loc[0,'RedOrGreen'] == "Green" :
     if candlestick_data.loc[0,'RedOrGreen'] == "Green" and candlestick_data.loc[1, 'RedOrGreen']== "Green" and candlestick_data.loc[2, 'RedOrGreen'] == "Green":
         # Determine price rise percentage 
         rise_one = determine_percent_rise(candlestick_data.loc[0,'open'], candlestick_data.loc[0,'close'])
         rise_two = determine_percent_rise(candlestick_data.loc[1,'open'], candlestick_data.loc[1,'close'])
         rise_three = determine_percent_rise(candlestick_data.loc[2,'open'], candlestick_data.loc[2,'close'])
         logging.info(f"rising rate for {symbol}: {rise_one}, and threshole { percentage_rise}")
-        if rise_one >= percentage_rise and rise_two >= percentage_rise and rise_three >= percentage_rise:
-        # if rise_one >= percentage_rise:
-            # We can enter a trade!
-            
+        if rise_one >= percentage_rise and rise_two >= percentage_rise and rise_three >= percentage_rise:     
             return True 
         else:
             return False 
     else:
         return False 
 
-# "SELL" rRises of less than 5% per 30 minutes for two consecutive time periods
+# "SELL" Rises of less than 5% per 30 minutes for two consecutive time periods
 def determine_sell_event(symbol, timeframe, percentage_rise): 
     # retrieve the pevious 2 candles 
     candlestick_data = get_and_transform_binance_data(symbol, timeframe, number_of_candles=2)
@@ -69,9 +65,9 @@ def calculate_sell_parameters(symbol, timeframe, asset_list, boughtQty, project_
     # see last candle, qty =1  
     raw_data = binance_interaction.get_candlestick_data(symbol, timeframe, qty=1)
     
-    tickSize, lotSize = binance_interaction.get_ticker_lot_size(symbol, project_setting)
-    tickSize = float(tickSize)
-    lotSize  = float(lotSize)
+    tick_size, lot_size = binance_interaction.get_ticker_lot_size(symbol, project_setting)
+    tick_size = float(tick_size)
+    lot_size  = float(lot_size)
 
     # Determine the precision required on for the symbol 
     precision = asset_list.loc[asset_list['symbol'] == symbol]
@@ -82,18 +78,19 @@ def calculate_sell_parameters(symbol, timeframe, asset_list, boughtQty, project_
 
     # Calculate the buy stop: you assume that the price will go up after this price.  
     stop_price = (close_price * 1.02)
-    stop_price  = stop_price //tickSize * tickSize
+    stop_price  = stop_price //tick_size * tick_size
     stop_price  = math.floor(stop_price  * 10**precision) / 10**precision
 
 
     limit_sell_price = stop_price * 0.98
-    limit_sell_price  = limit_sell_price //tickSize * tickSize
+    limit_sell_price  = limit_sell_price //tick_size * tick_size
     limit_sell_price  = math.floor(limit_sell_price  * 10**precision) / 10**precision
+
 
     #Calculate the quantity. this will be from previous bought amount 
     quantity = boughtQty
 
-    logging.info(f"Sell lotSize: {lotSize}")
+    logging.info(f"Sell lot_size: {lot_size}")
     logging.info(f"Sell precision: {precision}")
     logging.info(f"Limit Sell price after lot and precision: {limit_sell_price}")
         
@@ -118,9 +115,9 @@ def calculate_sell_parameters(symbol, timeframe, asset_list, boughtQty, project_
 # Function to calculate trade parameters, asset_list which has BUSD in it.  
 def calculate_trade_parameters(symbol, timeframe, asset_list, project_setting):
     # get filter 
-    tickSize, lotSize = binance_interaction.get_ticker_lot_size(symbol, project_setting)
-    tickSize = float(tickSize)
-    lotSize  = float(lotSize)
+    tick_size, lot_size = binance_interaction.get_ticker_lot_size(symbol, project_setting)
+    tick_size = float(tick_size)
+    lot_size  = float(lot_size)
     
     # see last candle, qty =1  
     raw_data = binance_interaction.get_candlestick_data(symbol, timeframe, qty=1)
@@ -134,7 +131,7 @@ def calculate_trade_parameters(symbol, timeframe, asset_list, project_setting):
 
     # Calculate the buy stop: you assume that the price will go up after this price.  
     buy_stop = (close_price * 1.01)
-    buy_stop = buy_stop//tickSize * tickSize
+    buy_stop = buy_stop//tick_size * tick_size
     buy_stop  = math.floor(buy_stop  * 10**precision) / 10**precision
 
     #Calculate the quantity. this will be buy_stop / $100 
@@ -143,9 +140,9 @@ def calculate_trade_parameters(symbol, timeframe, asset_list, project_setting):
     
         
         # Floor  
-        raw_quantity = raw_quantity//lotSize * lotSize 
+        raw_quantity = raw_quantity//lot_size * lot_size 
         quantity = math.floor(raw_quantity * 10**precision) / 10**precision
-        logging.info(f"Buy lotSize: {lotSize}")
+        logging.info(f"Buy lot_size: {lot_size}")
         logging.info(f"Buy precision: {precision}")
         logging.info(f"Buy quantity after lot and precision: {quantity}")
         
@@ -399,7 +396,6 @@ def strategy_two(timeframe, percentage_rise, quote_asset, project_settings, sell
                         logging.info(response)
                         if response['status'] == "FILLED":
                             boughtQty = response['executedQty'] 
-                            # spentBUSD = response['cummulativeQuoteQty']
                             # Place Sell order
                             logging.info(f"placing a sell order of {order_symbol} orderID {order_id}") 
                             params =  calculate_sell_parameters(order_symbol, sell_timeframe, asset_list=asset_list, boughtQty=boughtQty, project_setting = project_settings)
